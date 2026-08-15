@@ -24,30 +24,30 @@ const calendlyUrl = "https://calendly.com/keyu-reveliolabs/discovery";
 const startupProblems = [
   {
     title: "Expensive Consultants",
-    body: "Traditional compliance consultants charge $30-50K to set up your AML program - money early startups don't have."
+    body: "Traditional AML setup can cost $30-50K before you ship. Revelio gives early teams a practical framework without the consultant wait."
   },
   {
     title: "Regulatory Overwhelm",
-    body: "You're a founder, not a compliance expert. Figuring out what policies and frameworks you need feels impossible without help."
+    body: "Founders need clear answers, not regulatory guesswork. Start with policies and controls matched to your product, customers, and markets."
   },
   {
     title: "Months of Delays",
-    body: "Manual policy creation takes weeks if not months. While you wait, competitors ship, partners move on, and opportunities close."
+    body: "Manual policy creation slows launches. Move from questionnaire to operating compliance documentation in days, not months."
   }
 ];
 
 const enterpriseProblems = [
   {
     title: "Overwhelmed Regulation Updates",
-    body: "Your team spends 20+ hours/month manually checking FinCEN, FCA, MAS, and other regulator sites for updates. That's time they could spend on capturing bad actors."
+    body: "Teams spend 20+ hours each month checking regulator sites. Revelio filters FinCEN, FCA, MAS, and more into updates that matter."
   },
   {
     title: "Gap Analysis Takes Too Long",
-    body: "When regulations change, it takes weeks to analyze what's affected in your policies and controls. Revising documentation manually is error-prone and time-consuming."
+    body: "When rules change, instantly see affected policies, controls, owners, and documentation instead of waiting weeks for manual analysis."
   },
   {
     title: "Audit Risk and Version Control",
-    body: "Multiple versions of policies floating around. Incomplete change logs. No clear approval trails. When auditors or regulators ask for documentation, your team scrambles."
+    body: "Keep approval trails, version history, and change logs in one place so audit requests do not become a scramble."
   }
 ];
 
@@ -143,18 +143,19 @@ export default function Home() {
       <section className="hero-shell" id="top">
         <div className="hero">
           <div className="hero-copy">
-            <Pill>One platform, every stage</Pill>
+            <Pill>AI compliance infrastructure</Pill>
             <h1>
               Launch Faster
               <span>Stay Compliant Forever</span>
             </h1>
             <p>
-              Real-time AI agents watch global regulations, auto-update your
-              controls, execute complex tasks, and keep you audit-ready
+              AI agents monitor global regulations, update your control
+              framework, and keep every policy audit-ready as your fintech
+              grows.
             </p>
             <h2>
-              Built for startups and enterprises{" "}
-              <span>by alumni of PayPal, Mercury, Block, and Google</span>
+              Built for startup speed and enterprise rigor{" "}
+              <span>by alumni of PayPal, Mercury, Block, and Google.</span>
             </h2>
             <div className="hero-actions">
               <a href="#features" className="secondary-link">
@@ -190,8 +191,8 @@ export default function Home() {
         <div className="section-heading">
           <h2>Compliance Shouldn&apos;t Block Your Growth</h2>
           <p>
-            Manual compliance work slows you down at every stage - from initial
-            setup to multi-jurisdiction operations.
+            Manual compliance work slows every stage of a fintech company, from
+            first launch to multi-jurisdiction operations.
           </p>
         </div>
 
@@ -225,8 +226,12 @@ export default function Home() {
 
       <section className="section features-section" id="features">
         <div className="section-heading">
-          <Pill>We automate your regulatory compliance so you can focus on growth</Pill>
-          <h2>Your Best AML Regulatory Compliance Copilot</h2>
+          <Pill>Automate the work behind compliance</Pill>
+          <h2>Your AML Compliance Copilot</h2>
+          <p>
+            Revelio turns regulatory change into concrete policy updates,
+            control actions, and audit trails your team can trust.
+          </p>
         </div>
 
         <div className="feature-row">
@@ -234,10 +239,10 @@ export default function Home() {
             <span className="eyebrow">No-integration Set Up</span>
             <h3>48-Hour Framework Setup</h3>
             <p>
-              Answer a questionnaire about your business model, target customers,
-              transaction types, and jurisdictions. Our risk assessment database
-              evaluates your risk appetite and creates personalized policies,
-              procedures, and controls that match your specific needs.
+              Answer a focused questionnaire about your business model,
+              customers, transaction types, and jurisdictions. Revelio converts
+              that context into policies, procedures, controls, and a risk
+              framework tailored to your launch.
             </p>
           </div>
           <div className="mock-card setup-card">
@@ -272,10 +277,10 @@ export default function Home() {
             <span className="eyebrow">Real-Time Monitoring</span>
             <h3>Automated Regulatory Intelligence</h3>
             <p>
-              AI Agents monitor regulatory changes from FinCEN, FCA, MAS, and
-              20+ other regulators 24/7 with AI-powered filtering that shows
-              only what matters to your licenses and jurisdictions. No noise, no
-              overwhelm.
+              AI agents monitor FinCEN, FCA, MAS, and 20+ other regulators
+              around the clock. The system filters updates by license,
+              jurisdiction, and control impact so your team sees signal, not
+              noise.
             </p>
           </div>
           <div className="mock-card intelligence-card">
@@ -300,8 +305,9 @@ export default function Home() {
             <span className="eyebrow">AI-powered Gap Analysis</span>
             <h3>Instant Gap Analysis</h3>
             <p>
-              When regulations change, instantly see which policies, controls,
-              and procedures are affected with AI-powered impact assessment.
+              When regulations change, see exactly which policies, controls,
+              and procedures are affected, with a clear impact level for each
+              area.
             </p>
           </div>
           <div className="mock-card impact-card">
@@ -324,8 +330,8 @@ export default function Home() {
             <span className="eyebrow">All In One Place</span>
             <h3>One-Click Policy Updates</h3>
             <p>
-              Review AI-generated policy updates and apply changes across all
-              documentation with a single click. Complete audit trails included.
+              Review suggested policy language, approve the change, and apply
+              it across your documentation with complete audit trails.
             </p>
           </div>
           <div className="mock-card policy-card">
@@ -349,6 +355,10 @@ export default function Home() {
       <section className="section industries-section" id="industries">
         <div className="section-heading">
           <h2>Built for High-Risk Fintechs</h2>
+          <p>
+            Support for the business models where compliance pressure arrives
+            early and changes often.
+          </p>
         </div>
         <div className="industry-grid">
           {industries.map(({ icon: Icon, title, body }) => (
@@ -364,8 +374,12 @@ export default function Home() {
       <section className="section form-section" id="interest-form">
         <div className="form-panel">
           <div className="form-copy">
-            <h2>Ready to Launch Compliance-Ready?</h2>
-            <p>Launch Faster. Stay Compliant Forever.</p>
+            <span className="eyebrow">Get started</span>
+            <h2>Ready to launch compliance-ready?</h2>
+            <p>
+              Tell us where you are in your compliance journey. We&apos;ll follow
+              up within one business day.
+            </p>
           </div>
           <form action="mailto:keyu@reveliolabs.app" method="post" encType="text/plain">
             <div className="two-col">
