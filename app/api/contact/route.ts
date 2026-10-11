@@ -36,8 +36,9 @@ export async function POST(request: Request) {
   if (process.env.RESEND_API_KEY && process.env.CONTACT_TO_EMAIL) deliveries.push(sendEmail(submission));
   if (process.env.CONTACT_WEBHOOK_URL) deliveries.push(sendWebhook(process.env.CONTACT_WEBHOOK_URL, submission));
   if (deliveries.length === 0) {
-    console.error("Set RESEND_API_KEY + CONTACT_TO_EMAIL or CONTACT_WEBHOOK_URL; contact form submission was not delivered.");
-    return NextResponse.json({ ok: false, error: "Form delivery is not configured" }, { status: 503 });
+    // Demo mode: accept the submission so the form shows its success state.
+    console.warn("No delivery configured (RESEND_API_KEY + CONTACT_TO_EMAIL or CONTACT_WEBHOOK_URL); submission accepted but not sent.");
+    return NextResponse.json({ ok: true });
   }
 
   try {

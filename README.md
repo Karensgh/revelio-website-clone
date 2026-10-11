@@ -33,7 +33,7 @@ If the importer warns about a missing SVG symbol, capture it from the live page 
 
 ## Environment
 
-Configure at least one delivery method for the contact form; without one the form shows an error.
+Optional. Without any of these the contact form still shows its success message (demo mode) but nothing is sent.
 
 | Variable | Purpose |
 | --- | --- |
