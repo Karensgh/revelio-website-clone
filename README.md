@@ -11,7 +11,7 @@ Next.js rebuild of the Revelio Labs marketing site (https://www.reveliolabs.app)
 - `app/site-runtime.tsx` and `site/runtime/` reproduce the animations without Framer's JavaScript:
   scroll reveals, the hero scroll effect, the 48-Hour Framework diagram, hover states and the contact form.
 - `app/policy-updates.tsx` is the "One-Click Policy Updates" widget as a React component.
-- `app/api/contact/route.ts` receives the contact form and forwards it to `CONTACT_WEBHOOK_URL`.
+- `app/api/contact/route.ts` receives the contact form and emails it via Resend and/or forwards it to a webhook.
 
 ## Development
 
@@ -33,6 +33,11 @@ If the importer warns about a missing SVG symbol, capture it from the live page 
 
 ## Environment
 
+Configure at least one delivery method for the contact form; without one the form shows an error.
+
 | Variable | Purpose |
 | --- | --- |
-| `CONTACT_WEBHOOK_URL` | Webhook (Slack, Zapier, Make, Formspree, ...) that receives contact form submissions as JSON. Without it the form shows an error. |
+| `RESEND_API_KEY` | API key from https://resend.com. Enables email delivery. |
+| `CONTACT_TO_EMAIL` | Where submissions are emailed (comma-separate several addresses). |
+| `CONTACT_FROM_EMAIL` | Sender, e.g. `Revelio Website <website@reveliolabs.app>`. Needs a domain verified in Resend. Defaults to `onboarding@resend.dev`, which only delivers to the Resend account owner's address. |
+| `CONTACT_WEBHOOK_URL` | Optional webhook (Zapier, Make, ...) that receives each submission as JSON. |
